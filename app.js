@@ -3,7 +3,7 @@ import productsRoutes from './routes/products.routes.js';
 import clientsRoutes from './routes/clients.routes.js';
 import salesRoutes from './routes/sales.routes.js';
 import authRoutes from './routes/auth.routes.js';
-import CORS from 'Cors'
+import CORS from 'cors'
 
 
 
