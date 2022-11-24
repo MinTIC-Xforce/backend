@@ -2,12 +2,14 @@ import User from "../dal/models/auth.js";
 
 export const getUser = async (req, res) => {
     try {
-        const OneUser = await User.findById(req.params.id);
-    
+        const OneUser = await User.findOne({userName:req.params.username});
+        //res.header('Access-Control-Allow-Origin', '*');
+        //res.header('Access-Control-Allow-Headers', '*');
         if (!OneUser) {
           return res.sendStatus(404);
         } else {
           return res.json(OneUser);
+          
         }
       } catch (error) {
         return res.status(500).json({ message: error.message });
